@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import {HeroService} from './hero.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroDetailComponent } from './hero-detail.component';
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
     HttpModule
   ],
-  providers: [],
+  providers: [HeroService],// wstrzykiwanie zależności
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
